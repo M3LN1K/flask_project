@@ -1,15 +1,16 @@
+""" Импорт библиотек """
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
-
+""" Создание объекта """
 app = Flask(__name__)
 
 
 
 
 
-
+""" Создание путей """
 @app.route('/')
 @app.route('/home')
 def index():
@@ -166,5 +167,7 @@ def viennese_coffee():
 	return render_template("Viennese_coffee.html")
 
 
+
+""" Запуск сервера """
 if __name__ == "__main__":
 	app.run(debug=True)
